@@ -10,6 +10,14 @@ interface Endpoint {
   };
 }
 
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
+      signingSecret: string;
+    }
+  }
+}
+
 export default interface Endpoints {
   dadJoke: Endpoint;
   randomFact: Endpoint;
